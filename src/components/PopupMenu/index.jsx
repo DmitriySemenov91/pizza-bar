@@ -8,7 +8,8 @@ const PopupMenu = ({ children, items, onClick, activeItem }) => {
   const [visiblePopup, setVisiblePopup] = React.useState(false);
   const blockRef = React.useRef(null);
   const clickOutsideCallback = React.useCallback(e => {
-    if (!e.path.includes(blockRef.current)) {
+    let path = e.path || (e.composedPath && e.composedPath());
+    if (!path.includes(blockRef.current)) {
       setVisiblePopup(false);
     }
   }, []);

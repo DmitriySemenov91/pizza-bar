@@ -38,12 +38,12 @@ function App() {
       <div className={classNames('content__top', { noclick: isLoading })}>
         <Categories
           activeItem={filters.category}
-          items={['Все', 'Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые']}
+          items={['All', 'Meat', 'Vegetarian', 'Grill', 'Spicy', 'Closed']}
           onClick={selectCategory}
         />
         <SortPopup sortBy={filters.sortBy} onSelect={selectSort} />
       </div>
-      <h2 className="content__title">Все пиццы</h2>
+      <h2 className="content__title">All</h2>
       {console.log(isLoading)}
       <div className="content__items">
         {pizzas && !isLoading

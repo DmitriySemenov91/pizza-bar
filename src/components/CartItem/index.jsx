@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const CartItem = props => {
   const { imageUrl, name, type, size, count, price, onMinus, onPlus, onRemove } = props;
-  const typeNames = ['тонкое', 'традиционное'];
+  const typeNames = ['slim', 'traditional'];
 
   return (
     <div class="cart__item">
@@ -13,7 +13,7 @@ const CartItem = props => {
       <div class="cart__item-info">
         <h3>{name}</h3>
         <p>
-          {typeNames[type]} тесто, {size} см.
+          {typeNames[type]} pastry, {size} sм.
         </p>
       </div>
       <div class="cart__item-count">

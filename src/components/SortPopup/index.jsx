@@ -5,16 +5,16 @@ import { PopupMenu } from '../';
 
 const SortPopup = ({ sortBy, onSelect }) => {
   const items = [
-    { value: 'rating', label: 'популярному' },
-    { value: 'price', label: 'цене' },
-    { value: 'name', label: 'алфавиту' },
+    { value: 'rating', label: 'popular' },
+    { value: 'price', label: 'price' },
+    { value: 'name', label: 'A-Z' },
   ];
   const selected = items.find(obj => obj.value === sortBy);
   return (
     <div className="sort">
       <PopupMenu onClick={onSelect} activeItem={selected.value} items={items}>
         <div className="sort__label">
-          <b>Сортировка по:</b>
+          <b>Sort by:</b>
           <span>{selected.label}</span>
         </div>
       </PopupMenu>
